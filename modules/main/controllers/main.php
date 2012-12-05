@@ -100,8 +100,10 @@ class Main extends CMS_Controller {
                 }
 
                 //view login again
-                $data = array("identity" => $identity);
-                $data['err_login_message'] = 'Error: Login Failed';
+                $data = array(
+                		"identity" => $identity,
+                		"message" => 'Error: Login Failed'
+					);
                 $this->view('main/login', $data, 'main_login');
             }
         } else {
